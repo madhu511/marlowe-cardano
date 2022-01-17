@@ -111,6 +111,7 @@
           modules = [
             "Spec/Marlowe/ACTUS/Examples"
             "Spec/Marlowe/ACTUS/TestFramework"
+            "Spec/Marlowe/ACTUS/TestFrameworkMarlowe"
             "Spec/Marlowe/ACTUS/QCGenerator"
             "Spec/Marlowe/ACTUS/QCTests"
             ];
