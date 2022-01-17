@@ -5,6 +5,7 @@ module Main (main) where
 import Spec.Marlowe.ACTUS.Examples
 import Spec.Marlowe.ACTUS.QCTests
 import Spec.Marlowe.ACTUS.TestFramework
+import Spec.Marlowe.ACTUS.TestFrameworkMarlowe
 import System.Environment
 import Test.Tasty
 
@@ -44,6 +45,14 @@ main = do
           , Spec.Marlowe.ACTUS.TestFramework.tests "SWPPV" swppvTests
           , Spec.Marlowe.ACTUS.TestFramework.tests "CEG" cegTests
           -- , Spec.Marlowe.ACTUS.TestFramework.tests "CEC" cecTests
+          ],
+        testGroup
+          "ACTUS test-framework Marlowe"
+          [ Spec.Marlowe.ACTUS.TestFrameworkMarlowe.tests "PAM" pamTests
+          , Spec.Marlowe.ACTUS.TestFrameworkMarlowe.tests "LAM" lamTests
+          -- TODO: uncomment when Slot is replaced with POSIXTime
+          -- , Spec.Marlowe.ACTUS.TestFrameworkMarlowe.tests "NAM" namTests
+          -- , Spec.Marlowe.ACTUS.TestFrameworkMarlowe.tests "ANN" annTests
           ],
         testGroup
           "ACTUS examples"

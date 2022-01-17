@@ -15,6 +15,8 @@
 module Spec.Marlowe.ACTUS.TestFramework
   ( tests
   , testCasesFromFile
+  , TestCase (..)
+  , TestResult (..)
   )
   where
 
